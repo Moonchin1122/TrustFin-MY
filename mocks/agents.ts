@@ -1,0 +1,298 @@
+export interface Agent {
+  id: string;
+  name: string;
+  company: string;
+  type: 'individual' | 'company' | 'premium';
+  verified: boolean;
+  premium: boolean;
+  rating: number;
+  reviewCount: number;
+  successCases: number;
+  since: number;
+  state: string;
+  created_at?: string;
+  district: string;
+  specialties: string[];
+  partnerBanks: string[];
+  avatar: string;
+  yearsExperience?: number;
+  languages?: string[];
+  districts?: string[];
+  loanTypes?: string[];
+  description: {
+    ms: string;
+    en: string;
+    zh: string;
+  };
+  licenseNo: string;
+  licenseType: 'BNM' | 'SSM' | 'BNM_SSM';
+  phone: string;
+  whatsapp: string;
+  latitude: number;
+  longitude: number;
+}
+
+export const agents: Agent[] = [
+  {
+    id: '1',
+    name: 'Ahmad Razali',
+    company: 'AZ Finance Solutions',
+    type: 'premium',
+    verified: true,
+    premium: true,
+    rating: 4.9,
+    reviewCount: 234,
+    successCases: 189,
+    since: 2018,
+    state: 'Kuala Lumpur',
+    district: 'Bukit Bintang',
+    specialties: ['personalLoan', 'homeLoan', 'refinancing'],
+    partnerBanks: ['Maybank', 'CIMB', 'Public Bank', 'RHB'],
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Pakar pinjaman peribadi dan pembiayaan semula dengan pengalaman lebih 6 tahun.',
+      en: 'Personal loan and refinancing specialist with over 6 years experience.',
+      zh: '拥有超过6年经验的个人贷款和再融资专家。',
+    },
+    licenseNo: 'BNM/FA-2018-0234',
+    licenseType: 'BNM',
+    phone: '+60123456789',
+    whatsapp: '60123456789',
+    latitude: 3.1480,
+    longitude: 101.7137,
+  },
+  {
+    id: '2',
+    name: 'Mei Ling Tan',
+    company: 'ML Credit Advisory',
+    type: 'individual',
+    verified: true,
+    premium: false,
+    rating: 4.7,
+    reviewCount: 156,
+    successCases: 120,
+    since: 2019,
+    state: 'Penang',
+    district: 'George Town',
+    specialties: ['personalLoan', 'creditCard', 'carLoan'],
+    partnerBanks: ['Hong Leong', 'OCBC', 'UOB'],
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Penasihat kredit profesional yang membantu anda mendapat kadar terbaik.',
+      en: 'Professional credit advisor helping you get the best rates.',
+      zh: '专业信贷顾问，帮助您获得最优利率。',
+    },
+    licenseNo: 'SSM-2019-PG-0156',
+    licenseType: 'SSM',
+    phone: '+60174567890',
+    whatsapp: '60174567890',
+    latitude: 5.4141,
+    longitude: 100.3288,
+  },
+  {
+    id: '3',
+    name: 'Rajesh Kumar',
+    company: 'KR Financial Group',
+    type: 'company',
+    verified: true,
+    premium: true,
+    rating: 4.8,
+    reviewCount: 312,
+    successCases: 267,
+    since: 2015,
+    state: 'Johor',
+    district: 'Johor Bahru',
+    specialties: ['homeLoan', 'businessLoan', 'refinancing'],
+    partnerBanks: ['Maybank', 'CIMB', 'AmBank', 'Bank Rakyat'],
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Kumpulan kewangan terkemuka di Johor dengan rekod prestasi cemerlang.',
+      en: 'Leading financial group in Johor with an excellent track record.',
+      zh: '柔佛州领先的金融集团，拥有卓越的业绩记录。',
+    },
+    licenseNo: 'BNM/FA-2015-0089',
+    licenseType: 'BNM_SSM',
+    phone: '+60167891234',
+    whatsapp: '60167891234',
+    latitude: 1.4927,
+    longitude: 103.7414,
+  },
+  {
+    id: '4',
+    name: 'Nurul Aisyah',
+    company: 'Aisyah Finance Hub',
+    type: 'individual',
+    verified: true,
+    premium: false,
+    rating: 4.6,
+    reviewCount: 89,
+    successCases: 72,
+    since: 2020,
+    state: 'Selangor',
+    district: 'Petaling Jaya',
+    specialties: ['personalLoan', 'carLoan'],
+    partnerBanks: ['Maybank', 'BSN', 'Bank Islam'],
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Ejen mesra yang fokus pada pinjaman peribadi dan kereta.',
+      en: 'Friendly agent focused on personal and car loans.',
+      zh: '专注于个人贷款和车贷的友好代理。',
+    },
+    licenseNo: 'SSM-2020-SEL-0045',
+    licenseType: 'SSM',
+    phone: '+60189012345',
+    whatsapp: '60189012345',
+    latitude: 3.1073,
+    longitude: 101.6067,
+  },
+  {
+    id: '5',
+    name: 'David Lim',
+    company: 'Lim & Associates',
+    type: 'company',
+    verified: true,
+    premium: true,
+    rating: 4.9,
+    reviewCount: 421,
+    successCases: 356,
+    since: 2012,
+    state: 'Kuala Lumpur',
+    district: 'Bangsar',
+    specialties: ['homeLoan', 'businessLoan', 'refinancing', 'creditCard'],
+    partnerBanks: ['HSBC', 'Standard Chartered', 'Maybank', 'CIMB', 'Public Bank'],
+    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Firma perunding kewangan terkemuka dengan lebih 10 tahun pengalaman.',
+      en: 'Leading financial consulting firm with over 10 years experience.',
+      zh: '拥有超过10年经验的领先金融咨询公司。',
+    },
+    licenseNo: 'BNM/FA-2012-0012',
+    licenseType: 'BNM_SSM',
+    phone: '+60132345678',
+    whatsapp: '60132345678',
+    latitude: 3.1295,
+    longitude: 101.6711,
+  },
+  {
+    id: '6',
+    name: 'Siti Fatimah',
+    company: 'SF Pinjaman Pro',
+    type: 'individual',
+    verified: true,
+    premium: false,
+    rating: 4.5,
+    reviewCount: 67,
+    successCases: 48,
+    since: 2021,
+    state: 'Sabah',
+    district: 'Kota Kinabalu',
+    specialties: ['personalLoan', 'carLoan', 'creditCard'],
+    partnerBanks: ['Maybank', 'CIMB', 'RHB'],
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Membantu rakyat Sabah mendapat pinjaman terbaik.',
+      en: 'Helping Sabah residents get the best loans.',
+      zh: '帮助沙巴居民获得最佳贷款。',
+    },
+    licenseNo: 'SSM-2021-SBH-0033',
+    licenseType: 'SSM',
+    phone: '+60145678901',
+    whatsapp: '60145678901',
+    latitude: 5.9804,
+    longitude: 116.0735,
+  },
+  {
+    id: '7',
+    name: 'Lee Wei Ming',
+    company: 'WM Capital Sdn Bhd',
+    type: 'company',
+    verified: true,
+    premium: true,
+    rating: 4.8,
+    reviewCount: 198,
+    successCases: 165,
+    since: 2016,
+    state: 'Selangor',
+    district: 'Shah Alam',
+    specialties: ['homeLoan', 'businessLoan', 'educationLoan'],
+    partnerBanks: ['Maybank', 'CIMB', 'Hong Leong', 'OCBC'],
+    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Firma modal terkemuka di Selangor dengan kepakaran pinjaman perumahan dan perniagaan.',
+      en: 'Leading capital firm in Selangor specializing in home and business loans.',
+      zh: '雪兰莪州领先的资本公司，专注于房贷和商业贷款。',
+    },
+    licenseNo: 'BNM/FA-2016-0156',
+    licenseType: 'BNM_SSM',
+    phone: '+60156789012',
+    whatsapp: '60156789012',
+    latitude: 3.0733,
+    longitude: 101.5185,
+  },
+  {
+    id: '8',
+    name: 'Aisha Binti Hassan',
+    company: 'Aisha Quick Finance',
+    type: 'individual',
+    verified: true,
+    premium: false,
+    rating: 4.4,
+    reviewCount: 54,
+    successCases: 38,
+    since: 2022,
+    state: 'Kuala Lumpur',
+    district: 'Cheras',
+    specialties: ['personalLoan', 'quickCash', 'creditCard'],
+    partnerBanks: ['BSN', 'Bank Islam', 'Maybank'],
+    avatar: 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?w=150&h=150&fit=crop&crop=face',
+    description: {
+      ms: 'Pakar pinjaman peribadi cepat dan kad kredit di KL.',
+      en: 'Quick personal loan and credit card specialist in KL.',
+      zh: 'KL快速个人贷款和信用卡专家。',
+    },
+    licenseNo: 'SSM-2022-KL-0078',
+    licenseType: 'SSM',
+    phone: '+60198765432',
+    whatsapp: '60198765432',
+    latitude: 3.1068,
+    longitude: 101.7516,
+  },
+];
+
+export const malaysianDistricts: Record<string, string[]> = {
+  'Kuala Lumpur': ['Bukit Bintang', 'Bangsar', 'Cheras', 'Kepong', 'Wangsa Maju', 'Setapak', 'Titiwangsa', 'Lembah Pantai', 'Setiawangsa', 'Batu'],
+  'Selangor': ['Petaling Jaya', 'Shah Alam', 'Subang Jaya', 'Klang', 'Ampang', 'Kajang', 'Rawang', 'Sepang', 'Hulu Langat', 'Gombak', 'Kuala Selangor', 'Sabak Bernam'],
+  'Johor': ['Johor Bahru', 'Batu Pahat', 'Muar', 'Kluang', 'Kulai', 'Pontian', 'Segamat', 'Kota Tinggi', 'Mersing', 'Tangkak'],
+  'Penang': ['George Town', 'Butterworth', 'Bayan Lepas', 'Bukit Mertajam', 'Balik Pulau', 'Nibong Tebal', 'Kepala Batas', 'Tanjung Bungah'],
+  'Perak': ['Ipoh', 'Taiping', 'Teluk Intan', 'Sitiawan', 'Kampar', 'Kuala Kangsar', 'Batu Gajah', 'Gerik', 'Lenggong', 'Tapah'],
+  'Pahang': ['Kuantan', 'Temerloh', 'Bentong', 'Raub', 'Jerantut', 'Pekan', 'Rompin', 'Cameron Highlands', 'Lipis', 'Bera'],
+  'Kelantan': ['Kota Bharu', 'Pasir Mas', 'Tanah Merah', 'Machang', 'Kuala Krai', 'Bachok', 'Tumpat', 'Pasir Puteh', 'Gua Musang', 'Jeli'],
+  'Terengganu': ['Kuala Terengganu', 'Kemaman', 'Dungun', 'Besut', 'Marang', 'Hulu Terengganu', 'Setiu'],
+  'Kedah': ['Alor Setar', 'Sungai Petani', 'Kulim', 'Langkawi', 'Jitra', 'Kuala Kedah', 'Baling', 'Pendang', 'Yan', 'Sik'],
+  'Perlis': ['Kangar', 'Arau', 'Padang Besar', 'Kuala Perlis'],
+  'Negeri Sembilan': ['Seremban', 'Port Dickson', 'Nilai', 'Bahau', 'Kuala Pilah', 'Rembau', 'Tampin', 'Jempol'],
+  'Melaka': ['Melaka Tengah', 'Alor Gajah', 'Jasin', 'Ayer Keroh', 'Masjid Tanah'],
+  'Sabah': ['Kota Kinabalu', 'Sandakan', 'Tawau', 'Lahad Datu', 'Keningau', 'Semporna', 'Beaufort', 'Papar', 'Ranau', 'Kudat'],
+  'Sarawak': ['Kuching', 'Miri', 'Sibu', 'Bintulu', 'Limbang', 'Sarikei', 'Sri Aman', 'Kapit', 'Mukah', 'Betong'],
+  'Putrajaya': ['Presint 1', 'Presint 2', 'Presint 5', 'Presint 8', 'Presint 9', 'Presint 11', 'Presint 15', 'Presint 16'],
+  'Labuan': ['Labuan Town', 'Rancha-Rancha', 'Layang-Layangan'],
+};
+
+export const malaysianStates = [
+  'Kuala Lumpur',
+  'Selangor',
+  'Johor',
+  'Penang',
+  'Perak',
+  'Pahang',
+  'Kelantan',
+  'Terengganu',
+  'Kedah',
+  'Perlis',
+  'Negeri Sembilan',
+  'Melaka',
+  'Sabah',
+  'Sarawak',
+  'Putrajaya',
+  'Labuan',
+];
