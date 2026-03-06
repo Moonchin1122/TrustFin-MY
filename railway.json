@@ -1,8 +1,8 @@
 {
-  "$schema": "https://railway.com/railway.schema.json",
-  "deploy": {
-    "startCommand": "bun run backend/server.ts",
-    "healthcheckPath": "/api/health",
-    "healthcheckTimeout": 120
-  }
+"$schema": "https://railway.com/railway.schema.json",
+"deploy": {
+  "startCommand": "bun run backend/server.ts",
+  "healthcheckPath": "/api/health",
+  "healthcheckTimeout": 120
+}
 }
